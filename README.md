@@ -8,3 +8,8 @@ Components used in this project:
 3. Lighting to imitate ambient, diffuse and specular lighting
 4. Stars: Generated using point primitives kept inside a for loop with the location for the points kept random using srand() and rand()
 5. Mouse and keyboard callbacks to be able to perform actions on each mouse or keyboard event, to traverse around the three-dimensional world created in the code using two transform functions : Translation and Rotation.
+
+
+**NOTICE: xxf86vm is required. If you are running Linux, you can easily install libXxf86vm/libxxf86vm/xxf86vm(depending on the distro you have, package names vary oftentimes in different distros) in the termainal with your package manager.**
+Example, for installing in Fedora ,type in:
+`sudo dnf install libXxf86vm*`

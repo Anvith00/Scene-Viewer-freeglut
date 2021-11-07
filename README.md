@@ -13,3 +13,7 @@ Components used in this project:
 **NOTICE: xxf86vm is required. If you are running Linux, you can easily install libXxf86vm/libxxf86vm/xxf86vm(depending on the distro you have, package names vary oftentimes in different distros) in the termainal with your package manager.**
 Example, for installing in Fedora ,type in:
 `sudo dnf install libXxf86vm*`
+
+Do not forget to use these three linkers: glut, GL and GLU.
+
+If you're running C++ on a terminal, all you'll need to do is `g++ main.cpp -lglut -lGL -lGLU`

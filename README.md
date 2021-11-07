@@ -14,6 +14,6 @@ Components used in this project:
 Example, for installing in Fedora ,type in:
 `sudo dnf install libXxf86vm*`
 
-Do not forget to use these three linkers: glut, GL and GLU.
+Do not forget to use these three linkers: `glut`, `GL` and `GLU`.
 
 If you're running this C++ code on a terminal, all you'll need to do is `g++ <filename_you_saved_code_as>.cpp -lglut -lGL -lGLU`

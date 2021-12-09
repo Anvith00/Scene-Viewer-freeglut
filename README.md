@@ -19,3 +19,7 @@ Do not forget to use these three linkers: `glut`, `GL` and `GLU`.
 
 If you're running this C++ code on a terminal, all the command you'll need to have the code compiled is `g++ <filename_you_saved_code_as>.cpp -lglut -lGL -lGLU`
  (then `./a.out` to execute the compiled binary)
+ 
+ **OR**
+
+`g++ <filename_you_saved_code_as>.cpp -lglut -lGL -lGLU | ./a.out`

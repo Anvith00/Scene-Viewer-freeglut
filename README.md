@@ -1,6 +1,8 @@
 # Scene-Viewer-freeglut
-Scene Viewer made using freeglut and C++, can be used on any modern C++ development software(s) (IDEs/ text editors + compilers), all you need is freeglut libraries installed in your OS.
-Source code contained in one single file, i.e., main.cpp
+Concept 3D Scene Viewer made using freeglut and C++, all you need is the freeglut development library and a few packages installed in your OS ([check here](https://github.com/Anvith00/Scene-Viewer-freeglut/edit/main/README.md#setting-up)). The source code is one single file, i.e., main.cpp.
+
+![image](https://user-images.githubusercontent.com/24383877/219960025-576abeb3-d592-4746-9f9c-167bd2ccc7b0.png)
+
 
 Components used in this project:
 1. Three Primitives of geometries namely, Cube, Icosahedron and the Pyramid. 
@@ -10,16 +12,35 @@ Components used in this project:
 5. Mouse and keyboard callbacks to be able to perform actions on each mouse or keyboard event, to traverse around the three-dimensional world created in the code using two transform functions : Translation and Rotation.
 
 
-**NOTICE: xxf86vm might be required. If you are running Linux, you can easily install libXxf86vm/libxxf86vm/xxf86vm (depending on the distro you have, package names vary oftentimes in different package families of distros) in the terminal with your package manager.**
+## Setting up
+* **Linux:** `xxf86vm` and `g++` are required for Linux users. You can easily install libXxf86vm/libxxf86vm/xxf86vm (depending on the distro you have, package names vary oftentimes in different package families of distros) in the terminal with your package manager. Example:
+``` bash
+# Fedora Workstation
+sudo dnf install g++ libXxf86vm
+```
+``` bash
+# Ubuntu 22.04 and Pop!_OS
+sudo apt install g++ libxxf86vm
+```
+``` bash
+# Arch Linux
+sudo pacman -S gcc libxxf86vm
+```
 
-Example, for installing in Fedora ,type in:
-`sudo dnf install libXxf86vm*`
+* **Windows:** Windows users will be required to install g++ via the [MinGW C/C++ tool](https://sourceforge.net/projects/mingw/) (**not MYSYS2!**). You can also use MinGW-w64 to run this code.
+* **MacOS:** Code hasn't been tested on MacOS yet.
 
-Do not forget to use these three linkers: `glut`, `GL` and `GLU`.
-
-If you're running this C++ code on a terminal, all the command you'll need to have the code compiled is `g++ <filename_you_saved_code_as>.cpp -lglut -lGL -lGLU`
- (then `./a.out` to execute the compiled binary)
+## Running the code (Terminal)
+To get this running, the command you'll need to have the code compiled and run from the source root is:
+```bash
+g++ main.cpp -lglut -lGL -lGLU
+./a.out
+```
  
  **OR**
 
-`g++ <filename_you_saved_code_as>.cpp -lglut -lGL -lGLU | ./a.out`
+```bash
+g++ main.cpp -lglut -lGL -lGLU && ./a.out
+```
+
+(Do not forget to use these three linkers: `glut`, `GL` and `GLU`.)

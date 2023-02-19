@@ -13,7 +13,7 @@ Components used in this project:
 
 
 ## Setting up
-* **Linux:** `xxf86vm` and `g++` are required for Linux users. You can easily install libXxf86vm/libxxf86vm/xxf86vm (depending on the distro you have, package names vary oftentimes in different package families of distros) in the terminal with your package manager. Example:
+* **Linux:** `xxf86vm` and `g++` are required for Linux users. You can easily install `libXxf86vm`/ `libxxf86vm`/ `xxf86vm` (depending on the distro you have, package names vary oftentimes in different package families of distros) in the terminal with your package manager. Example:
 ``` bash
 # Fedora Workstation
 sudo dnf install g++ libXxf86vm

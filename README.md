@@ -16,18 +16,18 @@ Components used in this project:
 * **Linux:** `xxf86vm` and `g++` are required for Linux users. You can easily install `libXxf86vm`/ `libxxf86vm`/ `xxf86vm` (depending on the distro you have, package names vary oftentimes in different package families of distros) in the terminal with your package manager. Example:
 ``` bash
 # Fedora Workstation
-sudo dnf install g++ libXxf86vm
+sudo dnf install g++ libXxf86vm freeglut-devel
 ```
 ``` bash
 # Ubuntu 22.04 and Pop!_OS
-sudo apt install g++ libxxf86vm
+sudo apt install g++ libxxf86vm freeglut3-dev
 ```
 ``` bash
 # Arch Linux
-sudo pacman -S gcc libxxf86vm
+sudo pacman -S gcc libxxf86vm freeglut
 ```
 
-* **Windows:** Windows users will be required to install g++ via the [MinGW C/C++ tool](https://sourceforge.net/projects/mingw/) (**not MYSYS2!**). You can also use MinGW-w64 to run this code.
+* **Windows:** Windows users will be required to install `g++` via the [MinGW C/C++ tool](https://sourceforge.net/projects/mingw/) (**not MYSYS2!**). You can also use MinGW-w64 to run this code.
 * **MacOS:** Code hasn't been tested on MacOS yet.
 
 ## Running the code (Terminal)

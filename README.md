@@ -13,7 +13,8 @@ Components used in this project:
 
 
 ## Setting up
-* **Linux:** `xxf86vm` and `g++` are required for Linux users. You can easily install `libXxf86vm`/ `libxxf86vm`/ `xxf86vm` (depending on the distro you have, package names vary oftentimes in different package families of distros) in the terminal with your package manager. Example:
+* **Linux:** `xxf86vm` and `g++` are required for Linux users. You can easily install `libXxf86vm`/ `libxxf86vm`/ `xxf86vm` (depending on the distro you have, package names vary oftentimes in different package families of distros) in the terminal with your package manager. Freeglut development libraries are also needed. 
+Example:
 ``` bash
 # Fedora Workstation
 sudo dnf install g++ libXxf86vm freeglut-devel
@@ -27,20 +28,33 @@ sudo apt install g++ libxxf86vm freeglut3-dev
 sudo pacman -S gcc libxxf86vm freeglut
 ```
 
-* **Windows:** Windows users will be required to install `g++` via the [MinGW C/C++ tool](https://sourceforge.net/projects/mingw/) (**not MYSYS2!**). You can also use MinGW-w64 to run this code.
+* **Windows:** Windows users will be required to install `g++` using [MYSYS2](https://www.msys2.org/#installation). `mingw-w64-x86_64-gcc` contains the 64-bit binaries of g++.
+Use the MYSYS2 MINGW64 shell:
+```bash
+# MYSYS2 MINGW64 shell on Windows
+pacman -S git mingw-w64-x86_64-gcc mingw-w64-x86_64-freeglut
+# (Installing git is kind of redundant and optional depending on what Terminal you use for git operations !).
+```
+**Note to self:** (I also plan to replace MYSYS2 MINGW64 with MSVC in the longer run, to keep the development environment as native as possible).
+
 * **MacOS:** Code hasn't been tested on MacOS yet.
 
 ## Running the code (Terminal)
-To get this running, the command you'll need to have the code compiled and run from the source root is:
+* **Linux:**
+At the source root, run:
 ```bash
 g++ main.cpp -lglut -lGL -lGLU
 ./a.out
 ```
- 
- **OR**
+(Linkers: `glut`, `GL` and `GLU`).
 
+* **Windows:**
+At the source root, run:
 ```bash
-g++ main.cpp -lglut -lGL -lGLU && ./a.out
+g++ main.cpp -lfreeglut -lopengl32 -lglu32
+./a.exe
 ```
+(Linkers: `freeglut`, `opengl32` and `glu32`).
 
-(Do not forget to use these three linkers: `glut`, `GL` and `GLU`.)
+* **MacOS:**
+Code hasn't been tested on MacOS.
